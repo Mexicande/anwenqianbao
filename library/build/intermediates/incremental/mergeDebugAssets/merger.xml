@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/apple/Documents/anwenqianbao/library/assets"/><source path="/Users/apple/Documents/anwenqianbao/library/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/apple/Documents/anwenqianbao/library/src/debug/assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/apple/Documents/Project/anwenqianbao1.3/library/assets"/><source path="/Users/apple/Documents/Project/anwenqianbao1.3/library/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/apple/Documents/Project/anwenqianbao1.3/library/src/debug/assets"/></dataSet></merger>

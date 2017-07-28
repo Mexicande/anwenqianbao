@@ -22,8 +22,8 @@ public class CarmeraResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carmera_result);
-        ImmersionBar.with(this).statusBarColor(R.color.window_background)
-                .statusBarAlpha(0.3f)
+        ImmersionBar.with(this).statusBarColor(R.color.frame_color)
+                .statusBarAlpha(0.8f)
                 .fitsSystemWindows(true)
                 .init();
 
