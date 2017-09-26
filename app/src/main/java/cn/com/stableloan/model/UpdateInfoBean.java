@@ -30,13 +30,13 @@ public class UpdateInfoBean implements Serializable {
     // 是否可忽略该版本
     public boolean isIgnorable = true;
     // 一天内最大提示次数，<1时不限
-    public String maxtimes ;
+    public int maxtimes ;
     public String versioncode;
     public String versionname;
     public String updatecontent;
     public String url;
     public String md5;
-    public String size;
+    public long size;
 
     public UpdateInfoBean() {
 
@@ -82,11 +82,11 @@ public class UpdateInfoBean implements Serializable {
         isIgnorable = ignorable;
     }
 
-    public String getMaxTimes() {
+    public int getMaxTimes() {
         return maxtimes;
     }
 
-    public void setMaxTimes(String maxTimes) {
+    public void setMaxTimes(int maxTimes) {
         this.maxtimes = maxTimes;
     }
 
@@ -130,11 +130,11 @@ public class UpdateInfoBean implements Serializable {
         this.md5 = md5;
     }
 
-    public String getSize() {
+    public long getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(long size) {
         this.size = size;
     }
 

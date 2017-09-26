@@ -33,12 +33,7 @@ public class SuperTextAdapter extends BaseQuickAdapter<Product_DescBean.DataBean
         view4.setStrokeColor(Color.parseColor(item.getFont()));
         view4.setTextColor(Color.parseColor(item.getFont()));
         view4.setText(item.getName());
-        ViewGroup.LayoutParams lp = view4.getLayoutParams();
-        if (lp instanceof FlexboxLayoutManager.LayoutParams) {
-            FlexboxLayoutManager.LayoutParams flexboxLp =
-                    (FlexboxLayoutManager.LayoutParams) view4.getLayoutParams();
-            flexboxLp.setFlexGrow(1.0f);
-        }
+
 
 
 

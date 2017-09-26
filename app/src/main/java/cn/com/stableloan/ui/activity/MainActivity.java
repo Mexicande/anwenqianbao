@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,6 +13,7 @@ import android.support.v4.app.FragmentManager;
 
 import com.google.gson.Gson;
 import com.mancj.slideup.SlideUp;
+import com.meituan.android.walle.WalleChannelReader;
 import com.zhuge.analysis.stat.ZhugeSDK;
 
 import org.greenrobot.eventbus.EventBus;
@@ -80,8 +83,9 @@ public class MainActivity extends BaseActivity implements ProductFragment.BackHa
     }
 
     private void VisionTest() {
+        String  channel = WalleChannelReader.getChannel(this.getApplicationContext());
 
-        UpdateManager.create(this).setUrl(Urls.Update.APP_UPDATA).setPostData(Urls.Update.value).setParser(new IUpdateParser() {
+        UpdateManager.create(this).setUrl(Urls.Update.APP_UPDATA).setPostData(Urls.Update.value+channel).setParser(new IUpdateParser() {
             @Override
             public UpdateInfo parse(String source) throws Exception {
 
@@ -102,12 +106,12 @@ public class MainActivity extends BaseActivity implements ProductFragment.BackHa
                 info.versionName = infoBean.getVersionName();
                 info.url = infoBean.getUrl();
                 info.md5 =infoBean.getMd5();
-                info.size = Long.parseLong(infoBean.getSize());
+                info.size = infoBean.getSize();
                 info.isForce = infoBean.isForce();
                 info.isIgnorable = infoBean.isIgnorable();
                 info.isAutoInstall=infoBean.isAutoInstall();
-                info.isSilent = infoBean.isSilent();
-                info.maxTimes=Integer.parseInt(infoBean.getMaxTimes());
+                info.isSilent =  false;
+                info.maxTimes=infoBean.getMaxTimes();
                 return info;
             }
         }).setManual(true).setManual(true).setWifiOnly(false).setOnFailureListener(new OnFailureListener() {
@@ -308,6 +312,23 @@ public class MainActivity extends BaseActivity implements ProductFragment.BackHa
 
     }
 
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        if (newConfig.fontScale != 1)//非默认值
+            getResources();
+        super.onConfigurationChanged(newConfig);
+    }
+
+    @Override
+    public Resources getResources() {
+        Resources res = super.getResources();
+        if (res.getConfiguration().fontScale != 1) {//非默认值
+            Configuration newConfig = new Configuration();
+            newConfig.setToDefaults();//设置默认
+            res.updateConfiguration(newConfig, res.getDisplayMetrics());
+        }
+        return res;
+    }
 
 
     @Override

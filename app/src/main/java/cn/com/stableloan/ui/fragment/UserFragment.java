@@ -398,7 +398,6 @@ public class UserFragment extends ImmersionFragment {
                                     if ("0".equals(way1)) {
                                         Intent intent = new Intent(getActivity(), Verify_PasswordActivity.class).putExtra("from", "userinformation");
                                         startActivity(intent);
-
                                     } else {
                                         if (gesturePassword == null || "".equals(gesturePassword)) {
                                             Intent intent = new Intent(getActivity(), GestureLoginActivity.class).putExtra("from", "userinformation");
@@ -407,7 +406,6 @@ public class UserFragment extends ImmersionFragment {
                                             Intent intent = new Intent(getActivity(), Verify_PasswordActivity.class).putExtra("from", "userinformation");
                                             startActivity(intent);
                                         }
-
                                     }
                                 }
 
@@ -417,7 +415,6 @@ public class UserFragment extends ImmersionFragment {
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-
                         }
                     }
                 });

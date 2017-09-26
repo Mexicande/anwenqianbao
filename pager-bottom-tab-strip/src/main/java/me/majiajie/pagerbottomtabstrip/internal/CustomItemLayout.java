@@ -136,15 +136,6 @@ public class CustomItemLayout extends ViewGroup implements ItemController {
         }
     }
 
-    @Override
-    public void setMessageNumber(int index, int number) {
-        mItems.get(index).setMessageNumber(number);
-    }
-
-    @Override
-    public void setHasMessage(int index, boolean hasMessage) {
-        mItems.get(index).setHasMessage(hasMessage);
-    }
 
     @Override
     public void addTabItemSelectedListener(OnTabItemSelectedListener listener) {

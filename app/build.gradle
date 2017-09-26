@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId "cn.com.stableloan"
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 7
         multiDexEnabled true
         versionName "1.6.0"

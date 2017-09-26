@@ -12,9 +12,11 @@
         android:layout_height="match_parent"/>
     <me.majiajie.pagerbottomtabstrip.PageBottomTabLayout
         android:id="@+id/tab"
-        app:elevation="8dp"
+        app:elevation="4dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        app:tabPaddingTop="@dimen/_1dp"
+        app:tabPaddingBottom="2dp"
         android:background="@drawable/tab_background"
         android:layout_alignParentBottom="true"
         />

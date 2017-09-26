@@ -20,15 +20,6 @@ public class NavigationController implements ItemController,BottomLayoutControll
         mItemController.setSelect(index);
     }
 
-    @Override
-    public void setMessageNumber(int index, int number) {
-        mItemController.setMessageNumber(index,number);
-    }
-
-    @Override
-    public void setHasMessage(int index, boolean hasMessage) {
-        mItemController.setHasMessage(index,hasMessage);
-    }
 
     @Override
     public void addTabItemSelectedListener(OnTabItemSelectedListener listener) {

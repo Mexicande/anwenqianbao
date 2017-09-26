@@ -34,7 +34,7 @@ public interface Urls {
     //
     interface Update{
         String APP_UPDATA="http://api.shoujijiekuan.com/Home/ApiLogin/Version";
-        String value="url=vivo";
+        String value="url=";
     }
     interface  times{
         String MESSAGE_SEND="sms/getcode";

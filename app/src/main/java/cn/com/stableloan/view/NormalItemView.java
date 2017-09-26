@@ -17,7 +17,6 @@ public class NormalItemView extends BaseTabItem {
 
     private ImageView mIcon;
     private final TextView mTitle;
-    private final RoundMessageView mMessages;
 
     private int mDefaultDrawable;
     private int mCheckedDrawable;
@@ -40,7 +39,6 @@ public class NormalItemView extends BaseTabItem {
 
         mIcon = (ImageView) findViewById(R.id.icon);
         mTitle = (TextView) findViewById(R.id.title);
-        mMessages = (RoundMessageView) findViewById(R.id.messages);
     }
 
     /**
@@ -65,16 +63,6 @@ public class NormalItemView extends BaseTabItem {
             mIcon.setImageResource(mDefaultDrawable);
             mTitle.setTextColor(mDefaultTextColor);
         }
-    }
-
-    @Override
-    public void setMessageNumber(int number) {
-        mMessages.setMessageNumber(number);
-    }
-
-    @Override
-    public void setHasMessage(boolean hasMessage) {
-        mMessages.setHasMessage(hasMessage);
     }
 
     @Override

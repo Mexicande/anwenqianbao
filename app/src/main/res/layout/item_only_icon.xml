@@ -5,35 +5,26 @@
     android:layout_height="match_parent"
     android:background="?attr/selectableItemBackgroundBorderless"
     >
-    <RelativeLayout
+    <LinearLayout
         android:layout_gravity="center"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/icon"
-            android:layout_centerHorizontal="true"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
            />
         <TextView
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="2dp"
-            android:layout_below="@id/icon"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_2dp"
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:singleLine="true"
+            android:textSize="30px"
+            android:maxLines="1"
             />
-    </RelativeLayout>
-
-    <me.majiajie.pagerbottomtabstrip.internal.RoundMessageView
-        android:id="@+id/messages"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:translationX="14dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="3dp"
-        />
+    </LinearLayout>
 
 </FrameLayout>

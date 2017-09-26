@@ -128,17 +128,7 @@ public class MaterialItemView extends BaseTabItem
 
     }
 
-    @Override
-    public void setMessageNumber(int number) {
-        mMessages.setVisibility(View.VISIBLE);
-        mMessages.setMessageNumber(number);
-    }
 
-    @Override
-    public void setHasMessage(boolean hasMessage) {
-        mMessages.setVisibility(View.VISIBLE);
-        mMessages.setHasMessage(hasMessage);
-    }
 
     @Override
     public String getTitle() {

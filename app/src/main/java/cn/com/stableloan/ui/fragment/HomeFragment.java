@@ -511,4 +511,6 @@ public class HomeFragment extends ImmersionFragment implements View.OnClickListe
         ZhugeSDK.getInstance().track(getActivity(), "职业搜索",  eventObject);
 
     }
+
+
 }

@@ -67,16 +67,6 @@ public class NormalItemView extends BaseTabItem {
     }
 
     @Override
-    public void setMessageNumber(int number) {
-        mMessages.setMessageNumber(number);
-    }
-
-    @Override
-    public void setHasMessage(boolean hasMessage) {
-        mMessages.setHasMessage(hasMessage);
-    }
-
-    @Override
     public String getTitle() {
         return mTitle.getText().toString();
     }

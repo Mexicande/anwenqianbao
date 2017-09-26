@@ -37,7 +37,7 @@ public class AppApplication extends Application {
     //dao
 
     public static String today ;
-
+    String channel="test";
     private static AppApplication instance;
 
     public static SharedPreferences sp;
@@ -91,7 +91,7 @@ public class AppApplication extends Application {
         uploadManager=new UploadManager();
         instance = this;
 
-        String channel = WalleChannelReader.getChannel(this.getApplicationContext());
+        channel = WalleChannelReader.getChannel(this.getApplicationContext());
 
         ZhugeSDK.getInstance().init(getApplicationContext(),"24520d39b750437b97f026353aa80aea",channel);
 

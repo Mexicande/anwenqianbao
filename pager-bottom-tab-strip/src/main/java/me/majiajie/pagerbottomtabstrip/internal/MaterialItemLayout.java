@@ -287,15 +287,6 @@ public class MaterialItemLayout extends ViewGroup implements ItemController {
         setSelect(index,v.getX() + v.getWidth() / 2f,v.getY() + v.getHeight() / 2f);
     }
 
-    @Override
-    public void setMessageNumber(int index, int number) {
-        mItems.get(index).setMessageNumber(number);
-    }
-
-    @Override
-    public void setHasMessage(int index, boolean hasMessage) {
-        mItems.get(index).setHasMessage(hasMessage);
-    }
 
     @Override
     public void addTabItemSelectedListener(OnTabItemSelectedListener listener) {
