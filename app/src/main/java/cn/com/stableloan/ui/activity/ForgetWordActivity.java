@@ -226,11 +226,8 @@ public class ForgetWordActivity extends BaseActivity implements IValidateResult 
                             finish();
                         }else {
                             ToastUtils.showToast(ForgetWordActivity.this, infromBean.getError_message());
-
                         }
-
                     }
-
                     @Override
                     public void onError(Call call, Response response, Exception e) {
                         super.onError(call, response, e);
