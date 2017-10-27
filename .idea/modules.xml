@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/anwenqianbao.iml" filepath="$PROJECT_DIR$/anwenqianbao.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lockpattern/lockpattern.iml" filepath="$PROJECT_DIR$/lockpattern/lockpattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/pager-bottom-tab-strip/pager-bottom-tab-strip.iml" filepath="$PROJECT_DIR$/pager-bottom-tab-strip/pager-bottom-tab-strip.iml" />
       <module fileurl="file://$PROJECT_DIR$/validate/validate.iml" filepath="$PROJECT_DIR$/validate/validate.iml" />
     </modules>

@@ -27,26 +27,22 @@ android {
         tinkerEnabled = false
     }*/
     signingConfigs {
-        debug {
-            v1SigningEnabled true
-            v2SigningEnabled true
-        }
+       
         release {
             v1SigningEnabled true
             v2SigningEnabled true
-        }
-
-        release {
-            storeFile file("/Users/apple/Documents/文件/安卓.jks")
-            keyAlias "安卓"
-            keyPassword "000000"
-            storePassword "000000"
+            storeFile file("/Users/apple/Documents/文件/***.jks")
+            storePassword "*****"
+            keyAlias "****"
+            keyPassword "*****"
         }
         debug {
-            storeFile file("/Users/apple/Documents/文件/安卓.jks")
-            storePassword "000000"
-            keyAlias "安卓"
-            keyPassword "000000"
+            v1SigningEnabled true
+            v2SigningEnabled true
+            storeFile file("/Users/apple/Documents/文件/***.jks")
+            storePassword "*****"
+            keyAlias "****"
+            keyPassword "*****"
         }
     }
     packagingOptions {
