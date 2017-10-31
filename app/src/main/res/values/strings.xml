@@ -40,6 +40,7 @@
 
     <!--  UserFragment-->
     <string name="My_Integral">我的积分</string>
+    <string name="My_Cash">我的现金</string>
     <string name="inivte">邀请好友得现金</string>
     <string name="information">申请材料</string>
     <string name="collection">我的收藏</string>
@@ -88,7 +89,6 @@
 
 
     <!--  especial -->
-    <string name="private_key"></string>
-     <string name="public_key"></string>
-
+    <string name="private_key"></string> 
+    <string name="public_key"></string>
 </resources>
