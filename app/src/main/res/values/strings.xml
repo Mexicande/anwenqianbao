@@ -87,8 +87,8 @@
 
 
 
-    <!--  especial --> 
-    <string name="private_key">BI1hNZWOmpTyld2F</string> 
-    <string name="public_key">DkeI2HZ45KR+7qkSXQIDAQAB</string>
+    <!--  especial -->
+    <string name="private_key"></string>
+     <string name="public_key"></string>
 
 </resources>
