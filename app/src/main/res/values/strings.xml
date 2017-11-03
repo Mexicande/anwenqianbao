@@ -89,6 +89,8 @@
 
 
     <!--  especial -->
-    <string name="private_key"></string> 
-    <string name="public_key"></string>
+    <string name="private_key"></string>
+     <string name="public_key"></string>
+
+
 </resources>

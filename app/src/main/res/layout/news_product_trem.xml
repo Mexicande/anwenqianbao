@@ -81,11 +81,9 @@
                         android:gravity="center"
                         android:textSize="10sp"
                         app:corner="2dp"
-                        android:visibility="gone"
                         app:stroke_width="1dp"
                         />
                     <com.coorchice.library.SuperTextView
-                        android:visibility="gone"
                         android:id="@+id/label2"
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
@@ -100,7 +98,6 @@
                         app:stroke_width="1dp"
                         />
                     <com.coorchice.library.SuperTextView
-                        android:visibility="gone"
                         android:id="@+id/label3"
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
@@ -115,7 +112,6 @@
                         app:stroke_width="1dp"
                         />
                     <com.coorchice.library.SuperTextView
-                        android:visibility="gone"
                         android:id="@+id/label4"
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
@@ -131,7 +127,6 @@
                         />
                     <TextView
                         android:layout_gravity="bottom"
-                        android:visibility="gone"
                         android:layout_marginLeft="3dp"
                         android:id="@+id/shengluehao"
                         android:layout_width="wrap_content"
