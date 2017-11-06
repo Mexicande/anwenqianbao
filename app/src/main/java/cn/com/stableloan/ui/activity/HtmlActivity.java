@@ -43,6 +43,7 @@ import cn.com.stableloan.model.WelfareBean;
 import cn.com.stableloan.model.WelfareShutBean;
 import cn.com.stableloan.model.clsaa_special.Class_Special;
 import cn.com.stableloan.ui.js.JsInteration;
+import cn.com.stableloan.utils.DownAPKService;
 import cn.com.stableloan.utils.NetworkUtils;
 import cn.com.stableloan.utils.SPUtils;
 import cn.com.stableloan.utils.ToastUtils;
@@ -270,10 +271,21 @@ public class HtmlActivity extends BaseActivity {
                 Toast.makeText(HtmlActivity.this, "请安装最新版应用宝", Toast.LENGTH_SHORT).show();
             }
             return true;
+        }else if(url.endsWith(".apk")){
+            downloadApk(url);
+            return true;
+
         }
         else {
             return false;
         }
+    }
+
+    private void downloadApk(String url) {
+
+        Intent intent = new Intent(this, DownAPKService.class);
+        intent.putExtra("apk_url",url);
+        startService(intent);
     }
 
     @OnClick({R.id.iv_back, R.id.web_container})

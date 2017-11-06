@@ -228,7 +228,7 @@ public class LoginActivity extends BaseActivity implements Touch_login {
                     if(message!=null){
                         int count = ActivityStackManager.getInstance().getCount();
                         LogUtils.i("ActivityStackManager===",count+"");
-                        ActivityStackManager.getInstance().popAllActivityUntillOne(LoginActivity.class);
+                        ActivityStackManager.getInstance().popAllActivity();
                         MainActivity.launch(this);
                         finish();
                     }else {
@@ -262,7 +262,8 @@ public class LoginActivity extends BaseActivity implements Touch_login {
                 finish();
             }else {
                 if(message!=null){
-                    ActivityStackManager.getInstance().popAllActivityUntillOne(LoginActivity.class);
+                    ActivityStackManager.getInstance().popAllActivity();
+
                     MainActivity.launch(this);
                     finish();
                 }else {

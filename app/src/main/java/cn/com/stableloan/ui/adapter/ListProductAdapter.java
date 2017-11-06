@@ -34,14 +34,11 @@ public class ListProductAdapter  extends BaseQuickAdapter<Hot_New_Product.DataBe
 
     @Override
     protected void convert(BaseViewHolder helper, Hot_New_Product.DataBean item) {
-
         RequestOptions options = new RequestOptions()
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.NONE);
-
         Glide.with(mContext).load(item.getProduct_logo())
                     .apply(options).into((ImageView) helper.getView(R.id.ic_product_logo));
-
         SuperTextView view = (SuperTextView) helper.getView(R.id.label1);
         SuperTextView view1 = (SuperTextView) helper.getView(R.id.label2);
         SuperTextView view2 = (SuperTextView) helper.getView(R.id.label3);
@@ -77,7 +74,6 @@ public class ListProductAdapter  extends BaseQuickAdapter<Hot_New_Product.DataBe
                     view.setTextColor(Color.parseColor(lables.get(0).getFont()));
                     view.setStrokeColor(Color.parseColor(lables.get(0).getFont()));
                     view.setText(lables.get(0).getName());
-
                     view1.setVisibility(View.GONE);
                     view2.setVisibility(View.GONE);
                     view3.setVisibility(View.GONE);

@@ -322,7 +322,7 @@ public class ProductDesc extends BaseActivity {
                                     Intent intent=new Intent(ProductDesc.this,LoginActivity.class);
                                     intent.putExtra("message",error_message);
                                     intent.putExtra("from","DescError");
-                                    startActivity(intent);
+                                    startActivityForResult(intent,3000);
                                 } else {
                                     ToastUtils.showToast(ProductDesc.this, error_message);
                                 }

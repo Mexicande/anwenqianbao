@@ -638,7 +638,7 @@ public class LoginFragment extends Fragment {
                 if (Atest) {
                     AndPermission.with(getActivity())
                             .requestCode(200)
-                            .permission(Manifest.permission.READ_PHONE_STATE)
+                            .permission(Manifest.permission.READ_PHONE_STATE,Manifest.permission.WRITE_EXTERNAL_STORAGE)
                             .callback(listener)
                             .start();
                 } else {
