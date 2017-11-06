@@ -8,6 +8,7 @@
     <color name="base_white">#f2f3f5</color>
     <color name="desc_text_color">#686868</color>
     <color name="information_title">#17326b</color>
+    <color name="information_title1">#290f41</color>
    <!-- 产品list-->
     <color name="white">#FFFFFF</color>
     <color name="product_name_color">#2d2d2d</color>

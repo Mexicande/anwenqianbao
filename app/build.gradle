@@ -19,9 +19,9 @@ android {
         applicationId "cn.com.stableloan"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 9
+        versionCode 8
         multiDexEnabled true
-        versionName "2.0.1"
+        versionName "2.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     sourceSets {
@@ -87,7 +87,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
     }
 }
-
 
 
 dependencies {

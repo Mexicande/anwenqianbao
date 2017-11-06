@@ -19,7 +19,6 @@
         android:layout_height="50dp"
         android:background="@drawable/editext_normal"
         whatever:testType="regexp"
-        android:tint="@color/select_text_color"
         android:maxLength="10"
         android:maxLines="1"
         android:hint="真实姓名"

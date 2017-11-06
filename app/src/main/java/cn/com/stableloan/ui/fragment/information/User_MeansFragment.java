@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
@@ -56,6 +57,7 @@ import cn.com.stableloan.model.Identity;
 import cn.com.stableloan.model.InformationEvent;
 import cn.com.stableloan.model.UserBean;
 import cn.com.stableloan.ui.activity.Camera2Activity;
+import cn.com.stableloan.ui.activity.CameraActivity;
 import cn.com.stableloan.ui.activity.GestureLoginActivity;
 import cn.com.stableloan.ui.activity.LoginActivity;
 import cn.com.stableloan.ui.activity.SafeActivity;
@@ -225,6 +227,7 @@ public class User_MeansFragment extends Fragment {
             }
         });
         //联系人数据
+
             etContactName.setOnSuperTextViewClickListener(new SuperTextView.OnSuperTextViewClickListener() {
                 @Override
                 public void onClickListener(SuperTextView superTextView) {
@@ -281,7 +284,7 @@ public class User_MeansFragment extends Fragment {
             // 这里的requestCode就是申请时设置的requestCode。
             // 和onActivityResult()的requestCode一样，用来区分多个不同的请求。
             if (requestCode == 500) {
-                Intent intent = new Intent(getActivity(), Camera2Activity.class);
+                Intent intent = new Intent();
                 mFile = CommonUtils.createImageFile("mFile");
                 //文件保存的路径和名称
                 intent.putExtra("file", mFile.toString());
@@ -292,8 +295,16 @@ public class User_MeansFragment extends Fragment {
                 //最大允许的拍照尺寸（像素数）
                 intent.putExtra("maxPicturePixels", 3840 * 2160);
                 //startActivityForResult(intent, AppApplication.TAKE_PHOTO_CUSTOM);
-                startActivity(intent);
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+                    intent.setClass(getActivity(), Camera2Activity.class);
+                    startActivity(intent);
+                }else {
+                    intent.setClass(getActivity(), CameraActivity.class);
+                    startActivity(intent);
+                    //ToastUtils.showToast(getActivity(),"暂时不支持"+ Build.VERSION.SDK_INT);
+                }
             }
+
         }
 
         @Override
@@ -301,6 +312,8 @@ public class User_MeansFragment extends Fragment {
             // 权限申请失败回调。
             if (requestCode == 500) {
                 // TODO ...
+                ToastUtils.showToast(getActivity(),"获取权限失败，请在设置中手动添加拍照权限");
+
             }
         }
     };
@@ -372,7 +385,8 @@ public class User_MeansFragment extends Fragment {
                                         }
                                         etCity.setRightString(identityBean.getCity());
                                         Identity.DataBean.IdentityBean.ContactBean bean = identityBean.getContact().get(0);
-                                        etContact.setRightString(bean.getUserphone());
+
+                                        etContact1.setRightString(bean.getUserphone());
 
                                         etContactName.setRightString(bean.getContact());
 
@@ -385,7 +399,7 @@ public class User_MeansFragment extends Fragment {
 
                                         Identity.DataBean.IdentityBean.ContactBean bean1 = identityBean.getContact().get(1);
 
-                                        etContact1.setRightString(bean1.getUserphone());
+                                        etContact.setRightString(bean1.getUserphone());
                                         etContactName2.setRightString(bean1.getContact());
 
                                         String bet2 = bean1.getRelation();
@@ -637,8 +651,8 @@ public class User_MeansFragment extends Fragment {
         String city = etCity.getRightString();
         String between1 = etBetween1.getRightString();
         String between2 = etBetween2.getRightString();
-        String contact1 = etContact.getRightString();
-        String contact2 = etContact1.getRightString();
+        String contact1 = etContact1.getRightString();
+        String contact2 = etContact.getRightString();
         String contactName1 = etContactName.getRightString();
         String contactName2 = etContactName2.getRightString();
 
@@ -927,11 +941,13 @@ public class User_MeansFragment extends Fragment {
             String ContactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
             Cursor phone = cr.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
                     ContactsContract.CommonDataKinds.Phone.CONTACT_ID + "=" + ContactId, null, null);
-            if (phone.getCount() > 0) {
+            if (phone!=null&&phone.getCount() > 0) {
                 phone.moveToFirst();
                 contact[1] = phone.getString(phone.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
             }
-            phone.close();
+            if(phone!=null){
+                phone.close();
+            }
             cursor.close();
         } else
 

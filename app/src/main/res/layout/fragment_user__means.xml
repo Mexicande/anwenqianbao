@@ -169,7 +169,7 @@
         stv:sBottomDividerLineMarginLeft="10dp"
         stv:sBottomDividerLineMarginRight="10dp"
 
-        stv:sRightTextString="18500634223"
+        stv:sRightTextString=""
         />
 
     <cn.com.stableloan.view.supertextview.SuperTextView

@@ -1,49 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:fitsSystemWindows="false"
+    tools:context="com.xdandroid.hellocamera2.CameraActivity">
 
-
-    <SurfaceView
-        android:id="@+id/surfaceview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <cn.com.stableloan.view.PreviewBorderView
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/borderview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"
-        app:tipTextColor="@color/test"
-        app:tipTextSize="16dp"
-        />
-
-    <RelativeLayout
-        android:id="@+id/linearlaout"
-        android:layout_width="100dp"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#000000"
-        android:layout_alignParentRight="true"
-        >
-        <com.coorchice.library.SuperTextView
-            android:id="@+id/take"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            app:corner="40dp"
-            app:solid="#ffffff"
-            android:layout_centerInParent="true"
-            app:state_drawable_mode="center"
-            app:state_drawable_height="85dp"
-            app:state_drawable_width="85dp"
-            app:isShowState="true"
-            app:state_drawable="@drawable/round"
-            >
-        </com.coorchice.library.SuperTextView>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.xdandroid.hellocamera2.CameraActivity"
+        tools:showIn="@layout/activity_camera">
 
-    </RelativeLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fl_camera_preview"/>
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="52px"
+                android:id="@+id/view_camera_dark0"
+                android:layout_height="match_parent"
+                android:background="#8A000000"/>
+
+            <LinearLayout
+                android:layout_width="896px"
+                android:layout_height="match_parent"
+                android:id="@+id/view_camera_dark1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:background="#8A000000"
+                    android:gravity="center"
+                    android:textSize="28px"
+                    android:textColor="@color/colorPrimary"
+                    android:id="@+id/tv_camera_hint"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1">
+                    
+                    <View
+                        android:layout_width="6px"
+                        android:layout_height="110px"
+                        android:layout_gravity="top|left"
+                        android:background="@color/colorPrimary"/>
+
+                    <View
+                        android:layout_width="6px"
+                        android:layout_height="110px"
+                        android:layout_gravity="top|right"
+                        android:background="@color/colorPrimary"/>
+
+                    <View
+                        android:layout_width="6px"
+                        android:layout_height="110px"
+                        android:layout_gravity="bottom|left"
+                        android:background="@color/colorPrimary"/>
+
+                    <View
+                        android:layout_width="6px"
+                        android:layout_height="110px"
+                        android:layout_gravity="bottom|right"
+                        android:background="@color/colorPrimary"/>
+
+                    <View
+                        android:layout_width="110px"
+                        android:layout_height="6px"
+                        android:layout_gravity="top|left"
+                        android:background="@color/colorPrimary"/>
+
+                    <View
+                        android:layout_width="110px"
+                        android:layout_height="6px"
+                        android:layout_gravity="top|right"
+                        android:background="@color/colorPrimary"/>
+
+                    <View
+                        android:layout_width="110px"
+                        android:layout_height="6px"
+                        android:layout_gravity="bottom|left"
+                        android:background="@color/colorPrimary"/>
+
+                    <View
+                        android:layout_width="110px"
+                        android:layout_height="6px"
+                        android:layout_gravity="bottom|right"
+                        android:background="@color/colorPrimary"/>
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="52px"
+                    android:background="#8A000000"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="#8A000000"/>
+
+        </LinearLayout>
+
+                <ImageView
+                   android:id="@+id/iv_camera_button"
+                   android:layout_width="144px"
+                   android:layout_height="144px"
+                   android:layout_gravity="center_vertical|left"
+                  android:layout_marginLeft="1000px"
+                  android:src="@mipmap/iv_camera_button"/>
+               <ImageView
+                  android:id="@+id/iv_camera_off"
+                   android:layout_width="54px"
+                    android:layout_height="54px"
+                    android:layout_gravity="bottom|left"
+                     android:layout_marginLeft="1050px"
+                    android:layout_marginBottom="50px"
+                   android:src="@mipmap/camera_off"/>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

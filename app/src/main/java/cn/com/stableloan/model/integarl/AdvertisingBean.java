@@ -87,7 +87,7 @@ public class AdvertisingBean implements Serializable{
          * img : https://raw.githubusercontent.com/yipianfengye/android-adDialog/master/images/testImage1.png
          * push_times : 1
          */
-
+        private String aspectRatio;
         private int id;
         private String name;
         private int type;
@@ -100,6 +100,14 @@ public class AdvertisingBean implements Serializable{
         private String update_time;
         private String img;
         private int push_times;
+
+        public String getAspectRatio() {
+            return aspectRatio;
+        }
+
+        public void setAspectRatio(String aspectRatio) {
+            this.aspectRatio = aspectRatio;
+        }
 
         public int getId() {
             return id;

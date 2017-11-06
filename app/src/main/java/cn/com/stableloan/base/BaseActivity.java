@@ -27,12 +27,13 @@ import cn.com.stableloan.utils.keyboard.KeyBoardUtils;
  */
 
 public class BaseActivity extends AppCompatActivity {
-
+    private ImmersionBar mImmersionBar;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ImmersionBar.with(this).statusBarColor(R.color.colorPrimary)
-                .statusBarAlpha(0.3f)
+        ImmersionBar.with(this).statusBarColor(R.color.colorPrimary);
+        mImmersionBar = ImmersionBar.with(this);
+        mImmersionBar .statusBarAlpha(0.3f)
                 .fitsSystemWindows(true)
                 .init();
             ActivityStackManager.getInstance().pushActivity(this);
@@ -50,7 +51,8 @@ public class BaseActivity extends AppCompatActivity {
         {
             Glide.with(this).pauseRequests();
         }
-
+        if (mImmersionBar != null)
+                      mImmersionBar.destroy();
 
     }
 

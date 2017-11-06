@@ -229,7 +229,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
                             Gson gson = new Gson();
                             AdvertisingBean bean = gson.fromJson(s, AdvertisingBean.class);
                             if (bean.getError_code() == 0) {
-                                showAdvertising(bean.getData().getImg(), bean.getData().getUrl());
+                                showAdvertising(bean);
                             }
                         }
                     }
@@ -237,7 +237,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
     }
 
-    private void showAdvertising(String img, String url) {
+    private void showAdvertising(AdvertisingBean bean) {
 
         AdInfo adInfo = new AdInfo();
         long date = (long) SPUtils.get(getActivity(), "AdvertTime", 1111111111111L);
@@ -245,12 +245,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         if (today) {
 
         } else {
-            adInfo.setActivityImg(img);
+            adInfo.setActivityImg(bean.getData().getImg());
             advList = new ArrayList<>();
             advList.add(adInfo);
             AdManager adManager = new AdManager(getActivity(), advList);
             adManager.setOverScreen(true)
-                    .setWidthPerHeight(1)
+                    .setWidthPerHeight(Float.parseFloat(bean.getData().getAspectRatio()))
                     .setPageTransformer(new DepthPageTransformer());
             adManager.showAdDialog(AdConstant.ANIM_DOWN_TO_UP);
 
@@ -259,8 +259,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
             adManager.setOnImageClickListener(new AdManager.OnImageClickListener() {
                 @Override
                 public void onImageClick(View view, AdInfo advInfo) {
-                    if (!url.isEmpty()) {
-                        startActivity(new Intent(getActivity(), HtmlActivity.class).putExtra("advertising", url));
+                    if (!bean.getData().getUrl().isEmpty()) {
+                        startActivity(new Intent(getActivity(), HtmlActivity.class).putExtra("advertising", bean.getData().getUrl()));
                     }
                     adManager.dismissAdDialog();
                 }
