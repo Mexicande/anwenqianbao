@@ -19,9 +19,9 @@ android {
         applicationId "cn.com.stableloan"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 8
+        versionCode 10
         multiDexEnabled true
-        versionName "2.0.0"
+        versionName "2.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     sourceSets {
@@ -125,9 +125,6 @@ dependencies {
 
     //极验验证
     compile files('libs/commons-codec-1.5.jar')
-    /* compile 'com.squareup.retrofit:retrofit:1.9.0'
-                            compile 'io.reactivex:rxandroid:1.0.1'wq
-                            compile 'io.reactivex:rxjava:1.0.14'*/
 
     // walle
     compile files('libs/mta-sdk-1.6.2.jar')

@@ -1,5 +1,6 @@
 package cn.com.stableloan.view.flowlayout_tag;
 
+import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -28,7 +29,13 @@ public abstract class TagAdapter<T>
     {
         void onChanged();
     }
+    public void onSelected(int position, View view){
+        Log.d("zhy","onSelected " + position);
+    }
 
+    public void unSelected(int position, View view){
+        Log.d("zhy","unSelected " + position);
+    }
     void setOnDataChangedListener(OnDataChangedListener listener)
     {
         mOnDataChangedListener = listener;

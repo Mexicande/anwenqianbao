@@ -20,6 +20,7 @@
         android:background="@drawable/editext_normal"
         whatever:testType="regexp"
         android:maxLength="10"
+        android:textColorHint="@color/gay"
         android:maxLines="1"
         android:hint="真实姓名"
         whatever:emptyAllowed="false"
@@ -35,6 +36,8 @@
         android:paddingLeft="@dimen/_5dp"
         android:layout_width="match_parent"
         android:textSize="@dimen/information_textSize"
+        android:textColorHint="@color/gay"
+
         android:layout_height="50dp"
         android:background="@drawable/editext_normal"
         whatever:testType="regexp"
@@ -74,6 +77,8 @@
         android:paddingLeft="@dimen/_5dp"
         android:layout_width="match_parent"
         android:textSize="@dimen/information_textSize"
+        android:textColorHint="@color/gay"
+
         android:layout_height="50dp"
         android:background="@drawable/editext_normal"
         android:tint="@color/select_text_color"
@@ -96,6 +101,8 @@
         android:background="@drawable/editext_normal"
         android:tint="@color/select_text_color"
         android:maxLines="1"
+        android:textColorHint="@color/gay"
+
         android:hint="11位有效手机号码"
         whatever:emptyAllowed="false"
         android:textColor="@color/select_text_color"
@@ -117,6 +124,8 @@
         android:tint="@color/select_text_color"
         android:maxLines="1"
         android:hint="真实地址"
+        android:textColorHint="@color/gay"
+
         whatever:emptyAllowed="false"
         android:textColor="@color/select_text_color"
         whatever:testType="regexp"
@@ -135,6 +144,8 @@
         android:tint="@color/select_text_color"
         android:maxLines="1"
         android:hint="请输入卡号"
+        android:textColorHint="@color/gay"
+
         whatever:emptyAllowed="false"
         android:textColor="@color/select_text_color"
         android:inputType="number"
@@ -154,6 +165,8 @@
         android:tint="@color/select_text_color"
         android:maxLength="10"
         android:maxLines="1"
+        android:textColorHint="@color/gay"
+
         android:hint="真实姓名"
         whatever:emptyAllowed="false"
         android:textColor="@color/select_text_color"
@@ -170,6 +183,8 @@
         android:layout_width="match_parent"
         android:textSize="@dimen/information_textSize"
         android:layout_height="50dp"
+        android:textColorHint="@color/gay"
+
         android:background="@drawable/editext_normal"
         android:tint="@color/select_text_color"
         android:maxLines="1"
@@ -193,6 +208,8 @@
         android:maxLines="1"
         android:hint="区号"
         android:gravity="center"
+        android:textColorHint="@color/gay"
+
         android:inputType="phone"
         whatever:emptyAllowed="false"
         android:textColor="@color/select_text_color"
@@ -211,6 +228,7 @@
         android:maxLines="1"
         android:hint="号码"
         android:gravity="center"
+        android:textColorHint="@color/gay"
         android:inputType="phone"
         whatever:emptyAllowed="false"
         android:textColor="@color/select_text_color"
@@ -228,6 +246,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="@dimen/information_textSize"
+        android:textColorHint="@color/gay"
+
         android:textColor="@color/select_text_color"
         android:maxLines="1"
         android:hint="邮箱地址"
@@ -246,6 +266,8 @@
         android:background="@drawable/editext_normal"
         android:tint="@color/select_text_color"
         android:maxLines="1"
+        android:textColorHint="@color/gay"
+
         android:hint="月收入"
         android:inputType="number"
         whatever:emptyAllowed="false"

@@ -143,8 +143,6 @@ public class UpImageIdentityActivity extends BaseActivity {
         int w = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
         int h = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
         ivBusiness.measure(w, h);
-        HEIGHT = ivBusiness.getMeasuredHeight();
-        WIDTH = ivBusiness.getMeasuredWidth();
         LogUtils.i("ivBusiness===", "\n" + HEIGHT + "," + WIDTH);
 
         token = (String) SPUtils.get(this, Urls.lock.TOKEN, "1");
@@ -241,7 +239,7 @@ public class UpImageIdentityActivity extends BaseActivity {
     private void fillImageView(String picturePath, ImageView imageView, String title) {
         if (!picturePath.isEmpty()) {
              options = new RequestOptions()
-                     .fitCenter()
+                    .centerCrop()
                     .error(R.mipmap.iv_error_image)
                     .placeholder(R.mipmap.iv_holder_image)
                     .diskCacheStrategy(DiskCacheStrategy.RESOURCE);
@@ -270,7 +268,6 @@ public class UpImageIdentityActivity extends BaseActivity {
                 .centerCrop()
                 .error(R.mipmap.iv_error_image)
                 .placeholder(R.mipmap.iv_holder_image)
-                .override(WIDTH, HEIGHT)
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE);
 
 
@@ -420,7 +417,7 @@ public class UpImageIdentityActivity extends BaseActivity {
                     });
                 } else {
                     RequestOptions options = new RequestOptions()
-                            .fitCenter()
+                            .centerCrop()
                             .error(R.mipmap.iv_error_image)
                             .placeholder(R.mipmap.iv_holder_image)
                             .override(WIDTH, HEIGHT)

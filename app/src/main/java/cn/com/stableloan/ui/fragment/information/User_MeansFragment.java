@@ -366,47 +366,47 @@ public class User_MeansFragment extends Fragment {
                                 if (identity.getData().getIsSuccess().equals("1")) {
                                     if (identity.getData().getStatus().equals("1")) {
                                         identityBean = identity.getData().getIdentity();
-                                        etName.setRightString(identityBean.getName());
-                                        etIDCard.setRightString(identityBean.getIdcard());
-                                        String sex = identityBean.getSex();
-                                        if ("0".equals(sex)) {
-                                            etSex.setRightString("女");
-                                        } else if ("1".equals(sex)) {
-                                            etSex.setRightString("男");
-                                        }
-                                        etAge1.setRightString(identityBean.getAge());
+                                        if(identityBean!=null){
+                                            etName.setRightString(identityBean.getName());
+                                            etIDCard.setRightString(identityBean.getIdcard());
+                                            String sex = identityBean.getSex();
+                                            if ("0".equals(sex)) {
+                                                etSex.setRightString("女");
+                                            } else if ("1".equals(sex)) {
+                                                etSex.setRightString("男");
+                                            }
+                                            etAge1.setRightString(identityBean.getAge());
 
-                                        etAddress.setRightString(identityBean.getIdaddress());
-                                        String marriage = identityBean.getMarriage();
-                                        if ("0".equals(marriage)) {
-                                            etMarriage.setRightString("未婚");
-                                        } else if ("1".equals(marriage)) {
-                                            etMarriage.setRightString("已婚");
-                                        }
-                                        etCity.setRightString(identityBean.getCity());
-                                        Identity.DataBean.IdentityBean.ContactBean bean = identityBean.getContact().get(0);
+                                            etAddress.setRightString(identityBean.getIdaddress());
+                                            String marriage = identityBean.getMarriage();
+                                            if ("0".equals(marriage)) {
+                                                etMarriage.setRightString("未婚");
+                                            } else if ("1".equals(marriage)) {
+                                                etMarriage.setRightString("已婚");
+                                            }
+                                            etCity.setRightString(identityBean.getCity());
+                                            Identity.DataBean.IdentityBean.ContactBean bean = identityBean.getContact().get(0);
 
-                                        etContact1.setRightString(bean.getUserphone());
+                                            etContact1.setRightString(bean.getUserphone());
 
-                                        etContactName.setRightString(bean.getContact());
+                                            etContactName.setRightString(bean.getContact());
 
-                                        String bet = bean.getRelation();
+                                            String bet = bean.getRelation();
 
-                                        if (!bet.isEmpty()) {
-                                            int i2 = Integer.parseInt(bet);
-                                            etBetween1.setRightString(list[i2]);
-                                        }
+                                            if (!bet.isEmpty()) {
+                                                int i2 = Integer.parseInt(bet);
+                                                etBetween1.setRightString(list[i2]);
+                                            }
+                                            Identity.DataBean.IdentityBean.ContactBean bean1 = identityBean.getContact().get(1);
+                                            etContact.setRightString(bean1.getUserphone());
+                                            etContactName2.setRightString(bean1.getContact());
 
-                                        Identity.DataBean.IdentityBean.ContactBean bean1 = identityBean.getContact().get(1);
+                                            String bet2 = bean1.getRelation();
 
-                                        etContact.setRightString(bean1.getUserphone());
-                                        etContactName2.setRightString(bean1.getContact());
-
-                                        String bet2 = bean1.getRelation();
-
-                                        if (!bet2.isEmpty()) {
-                                            int i1 = Integer.parseInt(bet2);
-                                            etBetween2.setRightString(list[i1]);
+                                            if (!bet2.isEmpty()) {
+                                                int i1 = Integer.parseInt(bet2);
+                                                etBetween2.setRightString(list[i1]);
+                                            }
                                         }
                                     } else {
 

@@ -223,6 +223,10 @@ public class TagFlowLayout extends FlowLayout implements TagAdapter.OnDataChange
                     Iterator<Integer> iterator = mSelectedView.iterator();
                     Integer preIndex = iterator.next();
                     TagView pre = (TagView) getChildAt(preIndex);
+
+                    setChildUnChecked(preIndex, pre);
+                    setChildChecked(position, child);
+
                     if(pre!=null){
                         pre.setChecked(false);
                     }
@@ -247,7 +251,15 @@ public class TagFlowLayout extends FlowLayout implements TagAdapter.OnDataChange
             }
         }
     }
+    private void setChildChecked(int position, TagView view) {
+        view.setChecked(true);
+        mTagAdapter.onSelected(position, view.getTagView());
+    }
 
+    private void setChildUnChecked(int position, TagView view) {
+        view.setChecked(false);
+        mTagAdapter.unSelected(position, view.getTagView());
+    }
     public TagAdapter getAdapter()
     {
         return mTagAdapter;

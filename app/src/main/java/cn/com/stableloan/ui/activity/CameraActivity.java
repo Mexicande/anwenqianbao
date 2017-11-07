@@ -220,14 +220,15 @@ public class CameraActivity extends AutoLayoutActivity {
                         }else {
                             ToastUtils.showToast(CameraActivity.this,"解析失败,请重新扫描");
                             SPUtils.remove(CameraActivity.this,"camera1");
+                            finish();
                         }
                     }
-
                     @Override
                     public void onError(Call call, Response response, Exception e) {
                         super.onError(call, response, e);
                         ToastUtils.showToast(CameraActivity.this,"解析失败,请重新扫描");
                         SPUtils.remove(CameraActivity.this,"camera1");
+                        finish();
                         hd.dismiss();
                     }
                 });
