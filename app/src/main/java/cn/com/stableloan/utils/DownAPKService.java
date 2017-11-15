@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.icu.text.DecimalFormat;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.IBinder;
@@ -18,6 +17,7 @@ import com.lzy.okgo.OkGo;
 import com.lzy.okgo.request.BaseRequest;
 
 import java.io.File;
+import java.text.DecimalFormat;
 
 import cn.com.stableloan.R;
 import okhttp3.Call;

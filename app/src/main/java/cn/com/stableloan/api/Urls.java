@@ -6,13 +6,13 @@ package cn.com.stableloan.api;
 
 public interface Urls {
 
-    String Ip_url="http://api.anwenqianbao.com/v1/";
+    String Ip_url="http://test.api.anwenqianbao.com/v1/";
 
-    String NEW_Ip_url="http://api.anwenqianbao.com/v2/";
+    String NEW_Ip_url="http://test.api.anwenqianbao.com/v2/";
 
-    String puk_URL="http://api.shoujijiekuan.com/Home/ApiLogin/";
+    String puk_URL="http://test.api.shoujijiekuan.com/Home/ApiLogin/";
 
-    String NEW_URL="http://api.shoujijiekuan.com/Home/";
+    String NEW_URL="http://test.api.shoujijiekuan.com/Home/";
 
     String HTML_URL="http://m.anwenqianbao.com/";
 

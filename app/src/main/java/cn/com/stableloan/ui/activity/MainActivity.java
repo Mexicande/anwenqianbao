@@ -180,7 +180,7 @@ public class MainActivity extends BaseActivity implements ProductFragment.BackHa
                      */
                     @Override
                     public void onBefore() {
-                        CProgressDialogUtils.showProgressDialog(MainActivity.this);
+                        //CProgressDialogUtils.showProgressDialog(MainActivity.this);
                     }
                     /**
                      * 网路请求之后
