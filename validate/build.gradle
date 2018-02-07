@@ -3,8 +3,8 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.LongMaoC'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         minSdkVersion 15

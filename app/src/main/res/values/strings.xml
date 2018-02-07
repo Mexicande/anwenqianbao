@@ -103,7 +103,7 @@
     <!--GetCashFragment-->
     <string name="cashInviteCopyWriting">邀好友能变现？多重玩法，快来试试！</string>
     <string name="cashRedeem">越多积分越多现金</string>
-    <string name="wait">请稍后.....</string>
+    <string name="wait">加载中,请稍等. . .</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

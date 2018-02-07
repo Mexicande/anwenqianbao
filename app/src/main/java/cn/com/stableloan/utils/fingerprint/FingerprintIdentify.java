@@ -29,7 +29,7 @@ import cn.com.stableloan.utils.fingerprint.impl.SamsungFingerprint;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  * <p>
- * Created by Awei on 2017/2/8.
+ * 指纹识别设备
  */
 public class FingerprintIdentify {
 
