@@ -604,7 +604,6 @@ public class MessageFragment extends Fragment {
                     public void onSuccess(String s, Call call, Response response) {
                         Gson gson = new Gson();
                         CodeMessage codeMessage = gson.fromJson(s, CodeMessage.class);
-                        LogUtils.i("CodeMessage", codeMessage);
                         if (codeMessage.getError_code() == 0) {
                             if ("1".equals(codeMessage.getData().getStatus())) {
                                 SPUtils.put(getActivity(), Urls.lock.TOKEN, codeMessage.getData().getToken());
@@ -712,7 +711,6 @@ public class MessageFragment extends Fragment {
                                     getActivity().finish();
                                 }
                             } else {
-                                LogUtils.i("status", codeMessage.getData().getStatus());
                                 Intent intent=new Intent(getActivity(), SettingPassWordActivity.class);
                                 intent.putExtra("userPhone", etPhone.getText().toString());
                                 intent.putExtra("is_insure",codeMessage.getData().getIs_insure());
